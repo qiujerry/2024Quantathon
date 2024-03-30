@@ -129,15 +129,15 @@ class SimpleBot:
 
         elif self.d_sent > 0:
             sent_diff = (abs(self.d_sent - self.c_sent)) %10
-            self.instrucs.append(["S","C",sent_diff*10,"O"])
-            self.instrucs.append(["B","D",100,"O"])
+            self.instrucs.append(["S","C",sent_diff*10,"H"])
+            self.instrucs.append(["B","D",100,"L"])
         elif self.c_sent > 0:
             sent_diff = (abs(self.c_sent - self.d_sent)) %10
-            self.instrucs.append(["S","D",sent_diff*10,"O"])
-            self.instrucs.append(["B","C",100,"O"])
+            self.instrucs.append(["S","D",sent_diff*10,"H"])
+            self.instrucs.append(["B","C",100,"L"])
         else:
-            self.instrucs.append(["S","D",abs(self.d_sent)*10,"O"])
-            self.instrucs.append(["S","C",abs(self.c_sent)*10,"O"])
+            self.instrucs.append(["S","D",abs(self.d_sent)*10,"H"])
+            self.instrucs.append(["S","C",abs(self.c_sent)*10,"H"])
             
     def execute(self, coil,dstock):
         inst = {

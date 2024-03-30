@@ -1,4 +1,6 @@
 import csv
+import matplotlib.pyplot as plt
+import numpy as np
 from simple_bot import SimpleBot
 
 def main():
@@ -19,7 +21,11 @@ def main():
     for x in range(1,len(CLF_data)):
         bot.next_day(CLF_data[x],delta_data[x])
 
-    print(bot.cur_val)
+    print(bot.cur_val())
+    y = bot.val_history
+    x = [x for x in range(len(y))]
+    plt.plot(x,y)
+    plt.show()
 
 if __name__ == "__main__":
     main()

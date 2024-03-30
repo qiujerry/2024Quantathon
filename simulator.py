@@ -4,7 +4,7 @@ from simple_bot import SimpleBot
 def main():
     print("Hello World")
 
-    bot = SimpleBot(1000)
+    bot = SimpleBot(10000)
 
     with open('DAL_data_1.csv', newline='') as f:
         reader = csv.reader(f)

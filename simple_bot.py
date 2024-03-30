@@ -17,8 +17,8 @@ class SimpleBot:
             
         
         self.days = self.days+1
-        if(self.days%365==0):
-            self.cash = self.cash + (self.cash*.0527)
+        # if(self.days%365==0):
+        #     self.cash = self.cash + (self.cash*.0527)
         
         self.d_history.append(dstock)
         self.c_history.append(coil)
